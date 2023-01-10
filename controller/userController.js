@@ -1,10 +1,10 @@
 const express = require('express')
-
+const Profile = require("../models/UserSchema")
 //Sign Up
 const signUp = async(req, res) => {
     const { name, email, password } = req.body;
 
-    User.findOne({ email }, (err, user) => {
+    Profile.findOne({ email }, (err, user) => {
       if (err) {
         return res.status(400).json({
           error: 'Something went wrong. Please try again'
