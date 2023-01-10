@@ -37,7 +37,7 @@ ProfileSchema.pre('save', async function () {
 })
 
 
-
+//creating a token
 ProfileSchema.methods.createJWT = function () {
   return jwt.sign(
     { userId: this._id, name: this.name },
@@ -48,6 +48,7 @@ ProfileSchema.methods.createJWT = function () {
   )
 }
 
+//creating an otp
 ProfileSchema.methods.GenerateOTP=function (){
     let otp=""
       for(i=0;i<=3;i++){
@@ -57,6 +58,7 @@ ProfileSchema.methods.GenerateOTP=function (){
       return otp
 }
 
+//comparing the function
 ProfileSchema.methods.comparePassword = async function (canditatePassword) {
   const isMatch = await bcrypt.compare(canditatePassword, this.password)
   return isMatch

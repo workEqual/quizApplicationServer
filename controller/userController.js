@@ -1,4 +1,3 @@
-const express = require('express')
 const Profile = require("../models/UserSchema")
 //Sign Up
 const signUp = async(req, res) => {
