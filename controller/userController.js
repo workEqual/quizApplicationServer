@@ -39,3 +39,29 @@ const signUp = async(req, res) => {
       });
     });
 }
+
+const login = async (req,res) => {
+
+const { email, password } = req.body;
+
+    // Find user in the database
+    const user = await User.findOne({ email });
+    if (!user) {
+      return res.status(401).json({ error: 'Invalid email or password' });
+    }
+
+    // Compare hashed password
+    const match = await bcrypt.compare(password, user.password);
+    if (!match) {
+      return res.status(401).json({ error: 'Invalid email or password' });
+    }
+
+    // Generate JWT
+    const token = jwt.sign({ id: user._id }, process.env.JWT_SECRET, {
+      expiresIn: '1d',
+    });
+
+    // Send JWT in the response
+    res.json({ token });
+}
+
