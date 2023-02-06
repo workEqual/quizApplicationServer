@@ -5,9 +5,6 @@ require('dotenv').config()
 const connection = require("./dbconnection/connection")
 
 
-
-
-
 //security on packages
 const helmet=require('helmet')
 const xss=require('xss-clean')
@@ -21,6 +18,12 @@ app.use(mongoSanitize())
 
 app.use(express.json());
 
+
+//routes
+const UserRoute = require("./routes/useRoute");
+
+
+app.use("/authentication",UserRoute);
 
 
 

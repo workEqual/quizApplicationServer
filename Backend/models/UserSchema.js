@@ -8,6 +8,11 @@ const ProfileSchema = new mongoose.Schema({
     type:String,
     required:[true,'please provide a name']
   },
+  username:{
+    type:String,
+    required:[true,'please provide a username'],
+    unique:true
+  },
  email: {
     type: String,
     required: [true, 'Please provide email'],

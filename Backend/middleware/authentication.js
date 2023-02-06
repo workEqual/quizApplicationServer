@@ -7,6 +7,7 @@ const Authentication = (req,res,next) =>{
     res.json({msg:"Please sign in"})
   }
   const token = authToken.split()[1]
+  res.json({msg:`this is your ${token}`})
 }
 
 
