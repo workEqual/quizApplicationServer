@@ -21,12 +21,19 @@ app.use(express.json());
 
 //routes
 const UserRoute = require("./routes/useRoute");
+const PeopleRoute = require("./routes/useProfile")
 
 
 app.use("/authentication",UserRoute);
+app.use("/users",PeopleRoute)
 
+app.get("/",(req,res)=>{
+   res.json({msg:"hello"})
+})
 
-
+app.listen(port,()=>{
+  console.log("connected")
+})
 
 const start=async()=>{
     try
