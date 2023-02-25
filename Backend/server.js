@@ -22,10 +22,15 @@ app.use(express.json());
 //routes
 const UserRoute = require("./routes/useRoute");
 const PeopleRoute = require("./routes/useProfile")
-
+const CategoryRoute = require("./routes/categoryRoute")
+const QuestionRoute = require("./routes/QuestionsRoute")
+const ChemistryRoute = require("./routes/chemistryRoute")
 
 app.use("/authentication",UserRoute);
 app.use("/users",PeopleRoute)
+app.use("/category",CategoryRoute)
+app.use("/question",QuestionRoute)
+app.use("/chemistry",ChemistryRoute)
 
 app.get("/",(req,res)=>{
    res.json({msg:"hello"})

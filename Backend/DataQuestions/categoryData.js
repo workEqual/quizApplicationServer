@@ -1,0 +1,40 @@
+const categoryData =[
+    {
+        categoryType:"Maths"
+    },
+    {
+        categoryType:"Agriculture"
+    },
+    {
+        categoryType:"Physics"
+    },
+    {
+        categoryType:"Chemistry"
+    },
+    {
+        categoryType:"Biochemistry"
+    },
+    {
+        categoryType:"Government"
+    },
+    {
+        categoryType:"English"
+    },
+       {
+        categoryType:"Geography"
+    },
+    {
+        categoryType:"Biology"
+    },
+    {
+        categoryType:"French"
+    },
+    {
+        categoryType:"Economics"
+    },
+
+]
+
+module.exports={
+    categoryData
+}
