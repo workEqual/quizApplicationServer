@@ -3,7 +3,7 @@ const { v4: uuidv4 } = require('uuid');
 
 
 const questionId=uuidv4().split('-')[0]
-const QuestionSchema = new mongoose.Schema({
+const GovernmentSchema = new mongoose.Schema({
      category:{
       type:String,
       required:[true,"Please provide a category"]
@@ -27,5 +27,4 @@ const QuestionSchema = new mongoose.Schema({
 })
 
 
-
-module.exports = mongoose.model("Question",QuestionSchema);
+module.exports=mongoose.model("Government",GovernmentSchema)

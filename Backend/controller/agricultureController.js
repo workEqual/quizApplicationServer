@@ -1,7 +1,5 @@
-const Question = require("../models/QuestionSchema");
-const {ChemistryQuestions} = require("../DataQuestions/Chemistry")
-const Chemistry = require("../models/ChemistrySchema")
-
+const {AgricultureQuestions} = require("../DataQuestions/Agriculture")
+const Agriculture = require("../models/AgricultureSchema")
 
 const createQuestion =async (req,res) =>{
   //const {description,alternatives,category}=req.body;
@@ -20,7 +18,7 @@ const createQuestion =async (req,res) =>{
   //      msg:"Please enter the category"
   //  })
   //}
-  const iscreate =await Chemistry.create(ChemistryQuestions)
+  const iscreate =await Agriculture.create(AgricultureQuestions)
   if(!iscreate){
    return res.json({
         msg:"Question was not created"
@@ -39,13 +37,13 @@ const deleteQuestion =async (req,res) =>{
         msg:"Please the question ID cannot be found"
     })
   }
-  const isFound=await Chemistry.findOne({questionId});
+  const isFound=await Agriculture.findOne({questionId});
   if(!isFound){
    return res.json({
         msg:"Please question was not found"
     })
   }
- const isDone = await Chemistry.deleteOne({isFound})
+ const isDone = await Agriculture.deleteOne({isFound})
   if(!isDone){
     return res.json({
         msg:"Question was not deleted please try again"

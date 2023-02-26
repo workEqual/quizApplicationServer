@@ -27,4 +27,4 @@ const PhysicSchema = new mongoose.Schema({
 })
 
 
-module.exports=mongoose.model("Physic",PhysicSchema)
+module.exports=mongoose.model("Physics",PhysicSchema)

@@ -4,7 +4,7 @@ const {
     createQuestion,
     deleteQuestion,
     updateQuestion
-} = require("../controller/physicsController")
+} = require("../controller/englishController")
 
 router.post("/create-Question",createQuestion);
 router.post("/deleteQuestion",deleteQuestion);
