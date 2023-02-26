@@ -1,4 +1,4 @@
-const Question = require("../models/QuestionSchema");
+
 const {EconomicsQuestions} = require("../DataQuestions/Economics")
 const Economics = require("../models/EconomicSchema");
 

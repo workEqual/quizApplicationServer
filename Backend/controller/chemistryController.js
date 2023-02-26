@@ -1,4 +1,4 @@
-const Question = require("../models/QuestionSchema");
+
 const {ChemistryQuestions} = require("../DataQuestions/Chemistry")
 const Chemistry = require("../models/ChemistrySchema")
 

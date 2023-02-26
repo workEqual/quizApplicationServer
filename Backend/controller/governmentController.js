@@ -1,4 +1,4 @@
-const Question = require("../models/QuestionSchema");
+
 const {GovernmentQuestions} = require("../DataQuestions/Government")
 const Government = require("../models/GovernmentSchema")
 

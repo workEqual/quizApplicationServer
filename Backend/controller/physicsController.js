@@ -1,4 +1,3 @@
-const Question = require("../models/QuestionSchema");
 const {PhysicsQuestions} = require("../DataQuestions/Physics")
 const Physics = require("../models/PhysicSchema")
 

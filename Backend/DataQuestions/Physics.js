@@ -1,102 +1,102 @@
 const PhysicsQuestions =[
     {
         category:"Physics",
-        description:"Agriculture is:",
+        description:"Only force acting on a bouncing ball is",
         alternatives:[
-            {text:"Primary Activity",answer:true},
-            {text:"Secondary Activity",answer:false},
-            {text:"Tertiary Activity",answer:false},
-            {text:"None of the Above Activity",answer:false},
+            {text:"Gravity",answer:false},
+            {text:"Weight of Ball",answer:false},
+            {text:"friction",answer:false},
+            {text:"Both a and B",answer:true},
         ]
     },
     {
         category:"Physics",
-        description:"Slash and Burn of agriculture is also known as:",
+        description:" Accelerometer detects the",
         alternatives:[
-            {text:"Intensive Farming",answer:false},
-            {text:"Extensive Farming",answer:false},
-            {text:"Shifting Farming",answer:true},
-            {text:"None of the Above",answer:false},
+            {text:"small acceleration",answer:false},
+            {text:"large acceleration",answer:false},
+            {text:"small deceleration",answer:false},
+            {text:"large acceleration and deceleration",answer:true},
         ]
     },
     {
         category:"Physics",
-        description:"Which is also known as golden fiber",
+        description:" If the gradient of a graph is negative, then the acceleration is",
         alternatives:[
-            {text:"Cotton",answer:false},
-            {text:"Wheat",answer:false},
-            {text:"Silk",answer:false},
-            {text:"Jute",answer:true},
+            {text:"positive",answer:false},
+            {text:"negative",answer:true},
+            {text:"zero",answer:false},
+            {text:"1",answer:false},
         ]
     },
     {
         category:"Physics",
-        description:"The most important staple food crops of the world are ........... and .........:",
+        description:" If a student drops a stone from a cliff of height 30 m and the time it takes to reach the ground is 2.6 s, then the acceleration due to gravity is",
         alternatives:[
-            {text:"Raji & Bajra",answer:false},
-            {text:"Tea & Coffee",answer:false},
-            {text:"Rice & wheat",answer:true},
-            {text:"Millets & Maize",answer:false},
+            {text:" 9 m s-2",answer:false},
+            {text:" 10 m s-2",answer:false},
+            {text:" 4 m s-2",answer:false},
+            {text:" 8.8 m s-2",answer:true},
         ]
     },
     {
         category:"Physics",
-        description:"It is also known Monoculture, ie sinlge crop grown over a large area.",
+        description:"Gradient of line of velocity-time graph is tells us the",
         alternatives:[
-            {text:"Commercial Grain Farming",answer:false},
-            {text:"Plantation Farming",answer:true},
-            {text:"Multiple Farming",answer:false},
-            {text:"Mixed Farming",answer:false},
+            {text:"velocity",answer:false},
+            {text:"acceleration",answer:true},
+            {text:"distance",answer:false},
+            {text:"time",answer:false},
         ]
     },
     {
         category:"Physics",
-        description:"The most important staple food crops of the world are ........... and .........:",
+        description:" A stone is thrown upwards with initial velocity of 20 m s-1, the height that stone will reach would be",
         alternatives:[
-            {text:"Raji & Bajra",answer:false},
-            {text:"Tea & Coffee",answer:false},
-            {text:"Rice & wheat",answer:true},
-            {text:"Millets & Maize",answer:false},
+            {text:"20m",answer:true},
+            {text:"30m",answer:false},
+            {text:"40m",answer:false},
+            {text:"50m",answer:false},
         ]
     },
     {
         category:"Physics",
-        description:"Out of the following which is not a cropping season of India ?",
+        description:"Projectile will attain its maximum range, if it is fired at an angle of",
         alternatives:[
-            {text:"Zaid",answer:false},
-            {text:"Kharif",answer:false},
-            {text:"Kaffir",answer:true},
-            {text:"Rabi",answer:false},
+           {text:" 30°",answer:false},
+            {text:" 47°",answer:false},
+            {text:" 90°",answer:false},
+            {text:"45°",answer:true},
         ]
     },
     {
         category:"Physics",
-        description:"Which one is not a millet crop? ",
+        description:"Equation of motion can be used for",
         alternatives:[
-            {text:"Jowar",answer:false},
-            {text:"Ragi",answer:false},
-            {text:"Wheat",answer:true},
-            {text:"Bajra",answer:false},
+            {text:"straight line motion only",answer:false},
+            {text:" curved motion only",answer:true},
+            {text:" motion along the circular path",answer:false},
+            {text:"all types of motion",answer:false},
         ]
     },
      {
         category:"Physics",
-        description:"The type of Agriculture practiced in India is:",
+        description:" Horizontal component of a bouncing ball is",
         alternatives:[
-            {text:"Intensive Farming",answer:true},
-            {text:"Extensive Farming",answer:false},
-            {text:"Primitive Farming",answer:false},
-            {text:"Mixed Farming",answer:false},
+            {text:"affected by gravity",answer:false},
+            {text:"unaffected by gravity",answer:true},
+            {text:"affected by weight",answer:false},
+            {text:"affected by constant force",answer:false},
         ]
     },
      {
         category:"Physics",
-        description:"Cultivation of grapes is also known as .....",
+        description:" When ball having a projectile motion is rising up, it",
         alternatives:[
-            {text:"Viticulture",answer:true},
-            {text:"Horticulture",answer:false},
-            {text:"Sericulture",answer:false},
-            {text:"Pisciculture",answer:false},
+            {text:"decelerates",answer:true},
+            {text:"accelerates",answer:false},
+            {text:"rises up with constant acceleration",answer:false},
+            {text:"acceleration becomes zero",answer:false},
         ]
     },
 ]

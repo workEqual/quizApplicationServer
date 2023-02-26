@@ -1,10 +1,10 @@
-const Question = require("../models/QuestionSchema");
-const {MathematicsQuestions} = require("../DataQuestions/Maths")
+const {MathsQuestions} = require("../DataQuestions/Maths")
 const Maths = require("../models/MathSchema")
 
 
 
 const createQuestion =async (req,res) =>{
+  
   //const {description,alternatives,category}=req.body;
   // if(!description){
   // return res.json({
@@ -21,7 +21,7 @@ const createQuestion =async (req,res) =>{
   //      msg:"Please enter the category"
   //  })
   //}
-  const iscreate =await Maths.create(MathematicsQuestions)
+  const iscreate =await Maths.create(MathsQuestions)
   if(!iscreate){
    return res.json({
         msg:"Question was not created"
@@ -66,8 +66,16 @@ const updateQuestion = (req,res) =>{
   }
 }
 
+
+const getQuestion =async (req,res) =>{
+ const mquestions = await Maths.find();
+ res.json({
+  questions:mquestions
+ })
+}
 module.exports={
     createQuestion,
     deleteQuestion,
-    updateQuestion
+    updateQuestion,
+    getQuestion
 }
