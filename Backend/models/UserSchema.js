@@ -1,9 +1,15 @@
 const mongoose = require("mongoose")
 const bcrypt=require('bcryptjs');
 const jwt=require('jsonwebtoken');
+const { v4: uuidv4 } = require('uuid');
 
 
+const UserId=uuidv4().split('-')[0]
 const ProfileSchema = new mongoose.Schema({
+   Id:{
+     type:String,
+     default:UserId
+   },
     name:{
     type:String,
     required:[true,'please provide a name']
@@ -45,7 +51,7 @@ ProfileSchema.pre('save', async function () {
 //creating a token
 ProfileSchema.methods.createJWT = function () {
   return jwt.sign(
-    { userId: this._id, name: this.name },
+    { userId: this.Id, name: this.name },
     process.env.JWT_SECRET,
     {
       expiresIn: process.env.JWT_EXPIRY,
@@ -53,8 +59,10 @@ ProfileSchema.methods.createJWT = function () {
   )
 }
 
+
+
 //creating an otp
-ProfileSchema.methods.GenerateOTP=function (){
+ProfileSchema.methods.GenerateOTP = function (){
     let otp=""
       for(i=0;i<=3;i++){
        let rand= Math.floor(Math.random()*9)
@@ -63,11 +71,17 @@ ProfileSchema.methods.GenerateOTP=function (){
       return otp
 }
 
+
 //comparing the function
 ProfileSchema.methods.comparePassword = async function (canditatePassword) {
   const isMatch = await bcrypt.compare(canditatePassword, this.password)
   return isMatch
 }
 
+ProfileSchema.methods.HashPassword = async function (newPass){
+ const salt = await bcrypt.genSalt(10)
+ const pass = await bcrypt.hash(newPass,salt)
+ return pass
+}
 
 module.exports = mongoose.model("Profile",ProfileSchema)

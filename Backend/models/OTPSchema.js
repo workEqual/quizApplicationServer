@@ -4,8 +4,7 @@ const bcrypt=require('bcryptjs');
 
 const VerifyToken=new mongoose.Schema({
  owner:{
-    type: mongoose.Types.ObjectId,
-    ref:'Profile',
+    type: String,
     required:true
   },
   OneTimePassword:{
@@ -14,7 +13,6 @@ const VerifyToken=new mongoose.Schema({
   },
   createdAt:{
     type:Date,
-    expires:'5m',
     default:Date.now()
   }
 })
